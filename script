@@ -1,0 +1,29 @@
+package test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class machinetest {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\admin\\Desktop\\Selenium\\geckodriver.exe");
+		WebDriver driver=new FirefoxDriver();
+		
+		driver.get("https://testffc.nimapinfotech.com/auth/login");	
+		driver.findElement(By.id("mat-input-0")).sendKeys("samiksharawool2002@gmail.com");
+		driver.findElement(By.id("mat-input-1")).sendKeys("Samiksha@2002");
+		Thread.sleep(16000);
+		driver.findElement(By.id("kt_login_signin_submit")).click();
+		
+	
+		
+		driver.findElement(By.xpath("//span[contains(text(),'My Customers')]")).click();
+		driver.findElement(By.xpath("//span[contains(text(),'New Customer')]")).click();
+		driver.findElement(By.xpath("//mat-form-field[@class='mat-form-field-fluid mat-form-field ng-tns-c22-131 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-pristine ng-invalid mat-form-field-invalid ng-touched']//div[@class='mat-form-field-wrapper']//div[@class='mat-form-field-flex']//div[@class='mat-form-field-infix']")).sendKeys("sami");		
+	
+	}
+
+}
